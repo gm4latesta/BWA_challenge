@@ -16,3 +16,5 @@ It is needed to map a local directory on which the hg19 database is avialable fo
 
 ## align-for-container.py
 It's the python script that will run bwa asking in input the directory in which is avaiable the hg19 database and the query file. 
+Once in the container, go the /script directory. 
+Type ```python3 align-for-container.py``` for running the script 
