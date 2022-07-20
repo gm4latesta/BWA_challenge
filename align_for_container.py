@@ -28,11 +28,11 @@ print ("launching command: " , command)
 os.system(command)
 
 print ("Creating md5sums")
-os.system("md5sum " + out_name + ".sai " + " > " + md5file)
-os.system("md5sum " + out_name + ".sam " + " >> " + md5file)
+os.system("md5sum " + out_path + out_name + ".sai " + " > " + out_path + md5file)
+os.system("md5sum " + out_path + out_name + ".sam " + " >> " + out_path + md5file)
 
 print ("gzipping out text file")
-command = "gzip " + out_name + ".sam"
+command = "gzip " + out_path + out_name + ".sam"
 print ("launching command: " , command)
 os.system(command)
 
