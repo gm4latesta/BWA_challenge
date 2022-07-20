@@ -8,10 +8,10 @@ from timeit import default_timer as timer
 #bwa aln -t 1 /hg19/hg19bwaidx myread.fa > myread.sai
 #bwa samse -n 10  /hg19/hg19bwaidx myread.sai myread.fa > myread.sam
 
-dbpath = input("insert dbpath: ")
+dbpath = "/database/"
 dbname = "hg19bwaidx"
 
-queryname = input("insert path and file to align: ")
+queryname = "/database/read_1.fa"
 
 out_path= "/database/"
 out_name = "out"
