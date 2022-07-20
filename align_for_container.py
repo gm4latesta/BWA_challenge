@@ -13,16 +13,17 @@ dbname = "hg19bwaidx"
 
 queryname = input("insert path and file to align")
 
+out_path= "/database/"
 out_name = "out"
 
 md5file = "md5.txt"
 
 
-command = "bwa aln -t 1 " + dbpath + dbname + " " + queryname + " > " + out_name + ".sai"
+command = "bwa aln -t 1 " + dbpath + dbname + " " + queryname + " > " + out_path + out_name + ".sai"
 print ("launching command: " , command)
 os.system(command)
 
-command = "bwa samse -n 10 " + dbpath + dbname + " " + out_name + ".sai " + queryname + " > " + out_name + ".sam"
+command = "bwa samse -n 10 " + dbpath + dbname + " " + out_path + out_name + ".sai " + queryname + " > " + out_path + out_name + ".sam"
 print ("launching command: " , command)
 os.system(command)
 
