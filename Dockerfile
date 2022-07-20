@@ -16,6 +16,6 @@ COPY hg19bwaidx.amb /database
 COPY hg19bwaidx.ann /database
 COPY hg19bwaidx.bwt /database
 COPY hg19bwaidx.pac /database
-COPY hg19bwaidx.sa /database
+#COPY hg19bwaidx.sa /database
 COPY read_1.fa /database
-RUN python3 /script/align_for_container.py
+CMD["python3" "/script/align_for_container.py"]
