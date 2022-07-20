@@ -6,7 +6,7 @@ This repo contains the Dockerfile needed for building the bwa containerized appl
 I give the instruction to copy the bwa executable and the python script that run the alignment in the container
 
 ### Command for building the container 
-```docker build -t alignment```
+```docker build -t alignment .```
 
 ### Command for running the container 
 ```
