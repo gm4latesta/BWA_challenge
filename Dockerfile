@@ -11,4 +11,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN mkdir /script 
 COPY bwa /usr/local/bin 
 COPY align_for_container.py /script
-
+RUN cd /script
+CMD ["align_for_container.py"]
+ENTRYPOINT ["python3"]
