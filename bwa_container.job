@@ -1,0 +1,39 @@
+########### The program that will be executed #######
+
+Executable = align_for_batch.py
+
+############ Input Sandbox  #########################
+
+#Can contain standard input
+
+transfer_input_files = bwa,/data/BDP1_2022/hg19/read_1.fa
+
+## Arguments that will be passed to the executable ##
+
+Arguments  = "world.txt 0"
+
+###### Output Sandbox ###############################
+
+Log        = condor.log    
+# will contain condor log
+
+Output     = condor.out    
+# will contain the standard output
+
+Error      = condor.error  
+# will contain the standard error
+
+transfer_output_files = /data/BDP1_2022/hg19/out.sam.gz, /data/BDP1_2022/hg19/out.sai, /data/BDP1_2022/hg19/md5.txt
+
+############## condor control variables #############
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+Universe   = vanilla
+
+#requirements = (Machine == "phd-wn-1")
+
+#####################################################
+
+Queue
