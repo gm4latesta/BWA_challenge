@@ -13,7 +13,7 @@ docker build -t alignment .
 
 ### Command for running the container 
 ```
-sudo docker run -v /data/BDP1_2022/hg19:/database alignment 
+docker run -v /data/BDP1_2022/hg19:/database alignment 
 ```
 It is needed to map a local directory on which the hg19 database is avialable for allowing the alignment once in the container. Also, in local should be available the query file in FASTA format in order to have the input for the python script. 
 
